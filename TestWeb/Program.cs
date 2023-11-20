@@ -24,4 +24,19 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "LoginPage",
+    pattern: "LoginPage/{action=LoginPage}/{id?}",
+    defaults: new { controller = "LoginPage" });
+
+app.MapControllerRoute(
+    name: "Container",
+    pattern: "Container/{action=Container}/{id?}",
+    defaults: new { controller = "Container" });
+
+app.MapControllerRoute(
+    name: "Movimentation",
+    pattern: "Movimentation/{action=Movimentation}/{id?}",
+    defaults: new { controller = "Movimentation" });
+
 app.Run();
