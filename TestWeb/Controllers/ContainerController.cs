@@ -4,7 +4,7 @@ namespace TestWeb.Controllers
 {
     public class ContainerController : Controller
     {
-        public IActionResult Container()
+        public IActionResult Index()
         {
             return View();
         }

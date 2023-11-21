@@ -1,7 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using TestWeb.Context;
+using TestWeb.Repositories;
+using TestWeb.Repositories.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+builder.Services.AddTransient<IMovimentationTypeRepository, MovimentationTypeRepository>();
+
+
 
 var app = builder.Build();
 
@@ -26,17 +39,14 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "LoginPage",
-    pattern: "LoginPage/{action=LoginPage}/{id?}",
-    defaults: new { controller = "LoginPage" });
+    pattern: "{action=LoginPage}/{id?}");
 
 app.MapControllerRoute(
     name: "Container",
-    pattern: "Container/{action=Container}/{id?}",
-    defaults: new { controller = "Container" });
+    pattern: "{action=Container}/{id?}");
 
 app.MapControllerRoute(
     name: "Movimentation",
-    pattern: "Movimentation/{action=Movimentation}/{id?}",
-    defaults: new { controller = "Movimentation" });
+    pattern: "{action=Movimentation}/{id?}");
 
 app.Run();

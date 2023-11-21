@@ -1,0 +1,39 @@
+﻿
+<form>
+    <div class="form-group">
+        <label for="MovimentationId">MovimentationId</label>
+        <input class="form-control" id="movimentationid" placeholder="MovimentationId">
+    </div>
+    <div class="form-group">
+        <label for="movimentationtype">Movimentation Type</label>
+        <select class="form-control" id="MovimentationType">
+            <option>GateIn</option>
+            <option>Reception</option>
+            <option>Scanner</option>
+            <option>Inspetion</option>
+            <option>Discharge</option>
+            <option>Stacking</option>
+            <option>Weighing</option>
+            <option>Loading on Board</option>
+            <option>Unloading from Board</option>
+            <option>Transfer</option>
+            <option>Repair</option>
+            <option>Customs</option>
+            <option>GateOut</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="starttime">Start Date</label>
+        <input type="datetime-local" class="form-control" id="startime" placeholder="Start Time">
+    </div>
+
+    <div class="form-group">
+        <label for="endtime">End Date</label>
+        <input type="datetime-local" class="form-control" id="endtime" placeholder="End Time">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Observations</label>
+        <textarea class="form-control" id="observations" rows="10"></textarea>
+    </div>
+</form>

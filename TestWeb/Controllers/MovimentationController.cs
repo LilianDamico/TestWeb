@@ -2,7 +2,7 @@
 
 namespace TestWeb.Controllers
 {
-    public class LoginPage : Controller
+    public class MovimentationController : Controller
     {
         public IActionResult Index()
         {
