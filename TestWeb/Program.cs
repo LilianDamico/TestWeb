@@ -13,6 +13,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 
 builder.Services.AddTransient<IMovimentationTypeRepository, MovimentationTypeRepository>();
+builder.Services.AddTransient<IMovimentationRepository, MovimentationRepository>();
+builder.Services.AddTransient<IContainerRepository, ContainerRepository>();
 
 
 

@@ -1,11 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace TestWeb.Models
 {
     public class Container
     {
-        [Key]
+        
         public int ContainerID { get; set; }
 
         public string Client { get; set; }
